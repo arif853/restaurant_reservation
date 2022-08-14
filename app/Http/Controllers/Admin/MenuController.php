@@ -54,7 +54,7 @@ class MenuController extends Controller
             $menu->catagories()->attach($request->categories);
         }
 
-        return to_route('admin.menus.index');
+        return to_route('admin.menus.index')->with('success', 'Menu created successfully.');
     }
 
     /**
@@ -110,7 +110,7 @@ class MenuController extends Controller
             $menu->catagories()->sync($request->categories);
         }
 
-        return to_route('admin.menus.index')->with('success', 'Category Updated successfully.');
+        return to_route('admin.menus.index')->with('success', 'Menu Updated successfully.');
     }
 
     /**
